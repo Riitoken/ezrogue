@@ -1,0 +1,11 @@
+class           license
+type            GLORYWARE
+ipname          EZRogue
+author          Ray Edward Bornert II
+aka             Riitoken
+date            2020-OCT-4 SUN
+copyright       2020 Riitoken, all rights reserved
+warranty        As is
+royalty         Free
+doc             https://docs.google.com/document/d/1xAZ-WAHxwBuu1H-LszPGuMQXLryebBYzBdrHzV2Gom0
+endclass
