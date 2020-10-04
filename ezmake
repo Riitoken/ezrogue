@@ -1,0 +1,4 @@
+## ezmake
+
+c++ -O3 main.cpp os.cpp -o ez -lcurses
+

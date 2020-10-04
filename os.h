@@ -16,6 +16,10 @@ cppsrc          begintext
 #ifndef _os_h_
 #define _os_h_
 
+void con__init();
+void con__fini();
+void con__refresh();
+
 void con__show_cursor( const bool onoff=false );
 void con__gotoyx( const int row, const int col );
 void con__home();

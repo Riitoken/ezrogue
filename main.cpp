@@ -85,6 +85,7 @@ void mover( const int drow, const int dcol )
 
 void on_c(const char c)
 {
+	mover(0,0);
 	con__putc(' ');
 	switch(tolower(c))
 	{
@@ -96,6 +97,7 @@ void on_c(const char c)
 	case 'x': gplaying = false; break;
 	}
 	con__putc('R');
+	mover(0,0);
 }
 
 void status()
@@ -140,6 +142,7 @@ void start( int argc, char* argv[] )
 	print_charset();
 	printf("\nPress <ANYKEY> to start\n");
 	srand((unsigned int)time(0L));
+	con__init();
 	con__getc();
 	con__erase( ' ' );
 	con__putc_at( grogue, grow, gcol );
@@ -161,6 +164,7 @@ void finish()
 	printf("\nezrogue finish.\n");
 	printf("\nPress <ANYKEY> to exit\n");
 	con__getc();
+	con__fini();
 }
 
 int main(int argc, char* argv[])

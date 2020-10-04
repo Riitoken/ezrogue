@@ -126,27 +126,92 @@ int con__puts( const char* s )
 	return con__puts_at( s, gcoord.Y, gcoord.X );
 }
 
+void con__refresh()
+{
+}
+void con__init()
+{
+}
+void con__fini()
+{
+}
 
 #else
 #include <curses.h>
-// linux functions here
 
-void con__show_cursor( const bool onoff=false ){};
-void con__gotoyx( const int row, const int col ){};
-void con__home(){};
+void con__refresh()
+{
+	refresh();
+}
 
-int con__erase( const char c ){};
+void con__fini()
+{
+	endwin();
+}
 
-char con__getc(){};
+void con__init()
+{
+	initscr();
+}
 
-int con__putc( const char  c ){};
-int con__puts( const char* s ){};
+void con__show_cursor( const bool onoff )
+{
+	curs_set( onoff );
+};
 
-int con__putc_at( const char  c, const int row, const int col ){};
-int con__puts_at( const char* s, const int row, const int col ){};
-int con__filln_at( const char c, const int n, const int row, const int col ){};
+void con__gotoyx( const int row, const int col )
+{
+	move(row,col);
+};
 
-bool con__iskbhit(){};
+void con__home()
+{
+	move(0,0);
+};
+
+int con__erase( const char c )
+{
+	clear();
+};
+
+char con__getc()
+{
+	noecho();
+	char c = getch();
+	echo();
+	return c;
+};
+
+int con__putc( const char  c )
+{
+	addch(c);
+};
+
+int con__puts( const char* s )
+{
+	return addstr(s);
+};
+
+int con__putc_at( const char  c, const int row, const int col )
+{
+	mvaddch(row,col,c);
+};
+
+int con__puts_at( const char* s, const int row, const int col )
+{
+	mvaddstr(row,col,s);
+};
+
+int con__filln_at( const char c, const int n, const int row, const int col )
+{
+	move(row,col);
+	clrtoeol();
+	//for(int i=0;i<n;i++)mvinsch( row,col+i, c );
+};
+
+bool con__iskbhit()
+{
+};
 
 #endif
 
