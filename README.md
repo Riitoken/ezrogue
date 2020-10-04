@@ -15,15 +15,15 @@ At the time of this writing,
 the WIN32 console 8bit ASCII
 character set was/is:
 
-/*
- !"#$%&'()*+,-./0123456789:;<=>?
-@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_
-`abcdefghijklmnopqrstuvwxyz{|}~
-ÇüéâäàåçêëèïîìÄÅÉæÆôöòûùÿÖÜ¢£¥₧ƒ
-áíóúñÑªº¿⌐¬½¼¡«»░▒▓│┤╡╢╖╕╣║╗╝╜╛┐
-└┴┬├─┼╞╟╚╔╩╦╠═╬╧╨╤╥╙╘╒╓╫╪┘┌█▄▌▐▀
-αßΓπΣσµτΦΘΩδ∞φε∩≡±≥≤⌠⌡÷≈°∙·√ⁿ²■ 
-*/
+    /*
+     !"#$%&'()*+,-./0123456789:;<=>?
+    @ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_
+    `abcdefghijklmnopqrstuvwxyz{|}~
+    ÇüéâäàåçêëèïîìÄÅÉæÆôöòûùÿÖÜ¢£¥₧ƒ
+    áíóúñÑªº¿⌐¬½¼¡«»░▒▓│┤╡╢╖╕╣║╗╝╜╛┐
+    └┴┬├─┼╞╟╚╔╩╦╠═╬╧╨╤╥╙╘╒╓╫╪┘┌█▄▌▐▀
+    αßΓπΣσµτΦΘΩδ∞φε∩≡±≥≤⌠⌡÷≈°∙·√ⁿ²■ 
+    */
 
 EZRogue is GLORYWARE per EZROGUE-LICENSE.TXT.
 You can find the source GLORYWARE license in this public google doc.
